@@ -18,7 +18,10 @@ const ShowSum = () => {
   const email = useRef();
 
 
-
+  const extractText = (htmlString) => {
+    const doc = new DOMParser().parseFromString(htmlString, 'text/html');
+    return doc.body.innerText;
+  };
   const [show, setShow] = useState(false);
   const handleClick = () => {
     setShow(false);
@@ -63,22 +66,29 @@ const ShowSum = () => {
 
   return (
     <>
-    <NavLink to="/">
-    <div className='header'>header</div></NavLink>
-    <section className='movie-section'>
+    <div className='movie-root'>
+    <div className='div-image'>
+    <img className='movie-section-img' src={ShowData.image ? ShowData.image.medium : logo} alt='{id}' />
+    </div>
+    <section className='movie-section show-section movie-section1' style={{marginLeft : "0px"}}>
       <div className='movie-card'>
         <div className='show-content'>
           <h1>{ShowData.name}</h1>
-          <p>{ShowData.summary}</p></div>
-        <div>
-        <img src={ShowData.image ? ShowData.image.medium : logo} alt='{id}' /></div>
-        <div className="btn">
-          <Button variant="primary" size="lg" onClick={handleShow}>BOOK Your Show</Button>
+          </div>
+        <div className='pt-5 fs-5 text-muted' >
+          <p>{extractText(ShowData.summary)}</p>
         </div>
+       <div  style={{marginTop :"70px"}}>
+       <div className="">
+          <button className='btn' onClick={handleShow}>BOOK Your Show</button>
+        </div>
+       </div>
       </div>
       </section>
+            
+    </div>
       
-      <Modal show={show} contentClassName='my-modal' onHide={handleClose}>
+      <Modal fullscreen="" show={show} contentClassName='my-modal' onHide={handleClose}>
         <Modal.Header className='cust' closeButton>
           <Modal.Title>Boooking Form</Modal.Title>
         </Modal.Header>

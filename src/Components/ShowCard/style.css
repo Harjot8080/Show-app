@@ -6,30 +6,21 @@
 	margin: 0;
 }
 
-
 body {
 	background: #457fb4;
 	font-family: "Roboto", sans-serif;
-  width: 100%;
 	display: flex;
 	height: 100vh;
-
-}
-
-
-#root{
-	width: 100%;
 }
 
 .hero-container {
 	margin: auto;
 	display: flex;
-	padding: 0px 100px;
 }
 
 .main-container {
 	width: 270px;
-	height: 580px;
+	height: 540px;
 	position: relative;
 	margin: 0 20px;
 }
@@ -50,7 +41,7 @@ body {
 .ticket-container {
 	background: #fff;
 	width: 270px;
-	height: 550px;
+	height: 520px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -159,146 +150,4 @@ body {
 	border: 0;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-}
-
-
-.header {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 10px 50px;
-}
-
-.header__logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.header__buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.header__button {
-  padding: 8px 12px;
-  background-color: #457fb4;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-
-.grid {
-	/* width: 100%; */
-	display: grid;
-	/* gap: 3rem; */
-  
-  }
-  
-  .grid-4-col {
-	grid-template-columns: repeat(4, 1fr);
-  }
-  
-  /* .card {
-	width: 25rem;
-	max-width: 30rem;
-	min-height: 30rem;
-	background-color: #fafaff; 
-	 padding: 2rem; 
-	border-radius: 1rem;
-  border: 0.2rem solid var(--text-clr);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  } */
-
-  .show-section{
-	margin: 0 40px;
-	background-color: #fafaff;
-	padding: 2rem;
-	border-radius: 1rem;
-	border: 0.2rem solid var(--text-clr);
-  }
-
-  .head{
-	color: white;
-	font-size: 2rem;
-	padding-left: 50px ;
-	margin-top: 10px;
-  }
-
-  .ticket__movie-genre{
-	padding: 4px 6px;
-	margin: 2px;
-  background-color: #457fb4;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  }
-
-  .movie-section{
-	margin-top: 20px;
-  }
-  .movie-root{
-	  display: grid;
-	  margin: 30px;
-	  gap: 20px;
-	  grid-template-columns: repeat(4, 1fr);
-  }
-
-  .movie-section1{
-	grid-column: span 3;
-  }
-
-  .div-image{
-	  width: 100%;
-	  padding: 10px;
-	  border-radius: 1rem;
-	  height: 100%;
-  }
-  .movie-section-img {
-	width: 100%;
-	height: 100%;
-	background-position: center;
-	background-size: cover;
-	border-radius: 1rem;
-}
-
-.movie-section-img:hover {
-	transform: scale(1.05);
-}
-
-.btn{
-	background-color: #457fb4;
-	padding: 20px 60px;
-	font-size: 1.2rem;
-	color: white;
-	border-radius: 1rem;
-}
-.btn:hover{
-	background-color: #509fe3;
-	color: white;
-	scale: 1.1;	
-	animation-duration: 1000ms;
-	transition-duration: 0.3s;
-	transition-behavior: ease-in-out;
-}
-
-.my-model{
-	min-height: 600px;
-}
-
-.model-content{
-	min-height: 600px;
 }
